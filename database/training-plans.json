@@ -1,0 +1,28 @@
+{
+  "TableName": "training-plans",
+  "KeySchema": [
+    {
+      "KeyType": "HASH",
+      "AttributeName": "userId"
+    },
+    {
+      "KeyType": "RANGE",
+      "AttributeName": "planId"
+    }
+  ],
+  "AttributeDefinitions": [
+    {
+      "AttributeName": "userId",
+      "AttributeType": "S"
+    },
+    {
+      "AttributeName": "planId",
+      "AttributeType": "S"
+    }
+  ],
+  "BillingMode": "PROVISIONED",
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 1,
+    "WriteCapacityUnits": 1
+  }
+}
