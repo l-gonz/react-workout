@@ -13,12 +13,13 @@ export const putItem = async (tableName: string, item: object) => {
     return await docClient.send(new PutCommand({ TableName: tableName, Item: item }));
 };
 
-export const updateItem = async (tableName: string, key: object, updateExpression: string, expressionValues: object) => {
+export const updateItem = async (tableName: string, key: object, updateExpression: string, expressionValues: object, expressionNames: Record<string, string> = {}) => {
     return await docClient.send(new UpdateCommand({
         TableName: tableName,
         Key: key,
         UpdateExpression: updateExpression,
         ExpressionAttributeValues: expressionValues,
+        ExpressionAttributeNames: expressionNames,
         ReturnValues: "UPDATED_NEW"
     }));
 };
