@@ -17,4 +17,4 @@
 
 ## Workout Feedback:
 - As a user, I want to track my progress over time, including improvements in performance and endurance.
-- As a user, I want to receive feedback or adjustments to my training plan based on my performance (e.g., increasing intensity if I’m progressing).
+- As a user, I want to receive feedback or adjustments to my training plan based on my performance (e.g., increasing intensity if I'm progressing).
